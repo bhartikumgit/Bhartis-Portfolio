@@ -26,9 +26,9 @@ export interface SkillCategory {
 export const DATA = {
   profile: {
     name: "Bharti Kumari",
-    role: "Data Intelligence & AI Engineer",
-    tagline: "Bridging the gap between raw data, automated systems, and business strategy.",
-    summary: "Hi, I am Bharti, and I like to call myself 'The Insight Architect' because I can turn raw chaos into automated clarity. I operate at the intersection of Data Analytics, Business Intelligence, and AI Automation, with the Web Development skills to build whatever tool the job needs. From training custom NLP models and automating GTM workflows to building full-stack dashboards, I don't just analyze data—I engineer the systems that make it useful.",
+    role: "AI Automation & Data Strategist",
+    tagline: "Engineering intelligent workflows that bridge data, backend logic, and business strategy.",
+    summary: "Hi, I am Bharti, and I like to call myself 'The Insight Architect'. Why? Because I don't just analyze data—I build the systems that give it meaning. I blend Data Science, AI Automation, and Backend Development to create scalable solutions. Beyond the code, I thrive on collaboration—working across teams to translate technical complexity into clear business value. My current obsession? Pushing the boundaries of what's possible with AI Automation.",
     location: "Bhopal, India",
     email: "bhartikum08@gmail.com",
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
@@ -103,8 +103,8 @@ export const DATA = {
       icon: LineChart
     },
     {
-      category: "Business & GTM",
-      skills: ["Market Research", "Competitive Benchmarking", "User Behaviour Insights", "Cohort Analysis", "Churn Analysis"],
+      category: "Soft Skills & Strategy",
+      skills: ["Cross-functional Collaboration", "Technical Communication", "Stakeholder Management", "Problem Solving", "Agile/Scrum"],
       icon: TrendingUp
     },
     {
