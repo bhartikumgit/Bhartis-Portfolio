@@ -26,8 +26,8 @@ export interface SkillCategory {
 export const DATA = {
   profile: {
     name: "Bharti Kumari",
-    role: "AI Automation & Data Strategist",
-    tagline: "Engineering intelligent workflows that bridge data, backend logic, and business strategy.",
+    role: "The Insight Architect",
+    tagline: "I like to call myself this because I interlink Tech and Business—engineering intelligent workflows that bridge data, backend logic, and strategy.",
     summary: "Hi, I am Bharti, and I like to call myself 'The Insight Architect'. Why? Because I don't just analyze data—I build the systems that give it meaning. I blend Data Science, AI Automation, and Backend Development to create scalable solutions. Beyond the code, I thrive on collaboration—working across teams to translate technical complexity into clear business value. My current obsession? Pushing the boundaries of what's possible with AI Automation.",
     location: "Bhopal, India",
     email: "bhartikum08@gmail.com",
