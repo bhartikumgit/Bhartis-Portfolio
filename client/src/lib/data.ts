@@ -1,4 +1,5 @@
 import { LucideIcon, Brain, TrendingUp, Search, Database, LayoutDashboard, Code2, LineChart, FileText } from "lucide-react";
+import avatarImage from "@assets/generated_images/3d_illustration_of_a_female_data_engineer_avatar.png";
 
 export interface Project {
   title: string;
@@ -34,7 +35,7 @@ export const DATA = {
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
     github: "https://github.com/bhartikumgit",
     phone: "+91 7357244181",
-    avatar: "/avatar.jpg"
+    avatar: avatarImage
   },
   experience: [
     {
