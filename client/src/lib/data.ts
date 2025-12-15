@@ -1,4 +1,5 @@
 import { LucideIcon, Brain, TrendingUp, Search, Database, LayoutDashboard, Code2, LineChart, FileText } from "lucide-react";
+import avatarImage from "@assets/shakal_1765811737986.jpg";
 
 export interface Project {
   title: string;
@@ -34,7 +35,7 @@ export const DATA = {
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
     github: "https://github.com/bhartikumgit",
     phone: "+91 7357244181",
-    avatar: "/attached_assets/shakal_1765811737986.jpg"
+    avatar: avatarImage
   },
   experience: [
     {
