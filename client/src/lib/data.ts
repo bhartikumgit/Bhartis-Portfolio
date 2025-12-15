@@ -34,7 +34,7 @@ export const DATA = {
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
     github: "https://github.com/bhartikumgit",
     phone: "+91 7357244181",
-    avatar: "/attached_assets/bharti_pphoto_1765811697605.jpg"
+    avatar: "/attached_assets/shakal_1765811737986.jpg"
   },
   experience: [
     {

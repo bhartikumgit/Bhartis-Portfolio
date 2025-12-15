@@ -54,7 +54,7 @@ export function Hero() {
               <img 
                 src={DATA.profile.avatar} 
                 alt={DATA.profile.name} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
