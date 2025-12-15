@@ -26,9 +26,9 @@ export interface SkillCategory {
 export const DATA = {
   profile: {
     name: "Bharti Kumari",
-    role: "AI Automation & Data Intelligence Engineer",
-    tagline: "Building self-driving workflows and intelligent data systems.",
-    summary: "I don't just analyze data; I build the systems that act on it. Moving beyond traditional reporting, I fuse Data Science with AI Automation to create intelligent workflows that scale. Whether it's training custom NLP models, automating GTM research, or engineering predictive pipelines, I turn complex processes into autonomous engines.",
+    role: "Data Intelligence & AI Engineer",
+    tagline: "Bridging the gap between raw data, automated systems, and business strategy.",
+    summary: "Hi, I am Bharti, and I like to call myself 'The Insight Architect' because I can turn raw chaos into automated clarity. I operate at the intersection of Data Analytics, Business Intelligence, and AI Automation, with the Web Development skills to build whatever tool the job needs. From training custom NLP models and automating GTM workflows to building full-stack dashboards, I don't just analyze data—I engineer the systems that make it useful.",
     location: "Bhopal, India",
     email: "bhartikum08@gmail.com",
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
