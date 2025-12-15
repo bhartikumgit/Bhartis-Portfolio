@@ -18,10 +18,10 @@ export function Hero() {
           <div className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
             Available for Opportunities
           </div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground leading-[1.1] mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.1] mb-6">
             Hi, I'm <span className="text-primary">{DATA.profile.name}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8 max-w-lg leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground font-light mb-8 max-w-lg leading-relaxed">
             {DATA.profile.role}. <br/>
             <span className="text-foreground font-normal">{DATA.profile.tagline}</span>
           </p>

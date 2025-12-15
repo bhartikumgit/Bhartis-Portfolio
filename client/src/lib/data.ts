@@ -26,15 +26,15 @@ export interface SkillCategory {
 export const DATA = {
   profile: {
     name: "Bharti Kumari",
-    role: "Business Data Analyst & Developer",
-    tagline: "I turn messy data into clear decisions.",
-    summary: "I work at the intersection of data, coding, product strategy, GTM, and business ops—sorting through messy inputs, mixed signals, and half-baked assumptions until the direction becomes obvious. I track how customers behave, how markets shift, and how teams actually operate, then map it into decisions that won’t collapse on contact with reality.",
+    role: "AI Automation & Data Intelligence Engineer",
+    tagline: "Building self-driving workflows and intelligent data systems.",
+    summary: "I don't just analyze data; I build the systems that act on it. Moving beyond traditional reporting, I fuse Data Science with AI Automation to create intelligent workflows that scale. Whether it's training custom NLP models, automating GTM research, or engineering predictive pipelines, I turn complex processes into autonomous engines.",
     location: "Bhopal, India",
     email: "bhartikum08@gmail.com",
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
     github: "https://github.com/bhartikumgit",
     phone: "+91 7357244181",
-    avatar: "/attached_assets/shakal_1765811737986.jpg"
+    avatar: "/attached_assets/bharti_pphoto_1765811697605.jpg"
   },
   experience: [
     {
