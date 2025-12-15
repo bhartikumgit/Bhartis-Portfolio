@@ -1,5 +1,6 @@
 import { DATA } from "@/lib/data";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -22,6 +23,8 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {DATA.projects.map((project, index) => {
             const Icon = project.icon;
+            const isHighlighted = project.highlight;
+            
             return (
               <motion.div
                 key={index}
@@ -29,28 +32,38 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
+                className={isHighlighted ? "md:col-span-2" : ""}
               >
-                <Card className="h-full flex flex-col hover:border-primary/50 transition-all hover:shadow-lg group bg-white border-border/60">
+                <Card className={cn(
+                  "h-full flex flex-col hover:border-primary/50 transition-all hover:shadow-lg group bg-white border-border/60",
+                  isHighlighted ? "border-primary/40 shadow-md bg-primary/5" : ""
+                )}>
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <div className={cn(
+                        "p-2 rounded-lg transition-colors",
+                        isHighlighted ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                      )}>
                         {Icon && <Icon className="w-6 h-6" />}
                       </div>
+                      {isHighlighted && (
+                         <span className="text-xs font-bold px-2 py-1 bg-primary text-primary-foreground rounded-full uppercase tracking-wider">Featured</span>
+                      )}
                     </div>
                     <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
                       {project.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className={cn("text-base leading-relaxed", isHighlighted ? "text-foreground/80" : "")}>
                       {project.description}
                     </CardDescription>
                     
                     {project.metrics && (
-                      <div className="space-y-1 bg-secondary/50 p-3 rounded-lg">
+                      <div className={cn("space-y-1 p-3 rounded-lg", isHighlighted ? "bg-white/60 border border-primary/10" : "bg-secondary/50")}>
                         {project.metrics.map((metric, i) => (
                           <div key={i} className="text-sm font-medium text-foreground/80 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60"></span>
+                            <span className={cn("w-1.5 h-1.5 rounded-full", isHighlighted ? "bg-primary" : "bg-primary/60")}></span>
                             {metric}
                           </div>
                         ))}
@@ -59,7 +72,7 @@ export function Projects() {
                   </CardContent>
                   <CardFooter className="flex flex-wrap gap-2 pt-4 border-t border-border/50">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="font-normal">
+                      <Badge key={tag} variant={isHighlighted ? "default" : "secondary"} className="font-normal">
                         {tag}
                       </Badge>
                     ))}

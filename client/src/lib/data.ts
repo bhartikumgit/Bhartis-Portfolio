@@ -8,6 +8,7 @@ export interface Project {
   metrics?: string[];
   link?: string;
   icon?: LucideIcon;
+  highlight?: boolean;
 }
 
 export interface Experience {
@@ -64,6 +65,28 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Lead Research & GTM Automation",
+      description: "Automated research pipeline using Clay and OpenAI to qualify 100+ target companies. Integrated with Zapier for lead classification and Notion for tracking.",
+      tags: ["Clay", "Zapier AI", "OpenAI", "Notion"],
+      metrics: ["Qualifies 100+ companies", "50% less manual research", "Automated ICP signals"],
+      icon: Database,
+      highlight: true
+    },
+    {
+      title: "Xeno Homepage Redesign",
+      description: "Redesigned the homepage to prioritize decisions over decoration. Focused on reducing 'Time-to-Insight' with features like Revenue Triage Mode and AI Quick Actions to force user action.",
+      tags: ["Product Design", "UX Strategy", "GTM Alignment", "Figma"],
+      metrics: ["Revenue Triage Mode", "AI Quick Actions", "Decision-First UI"],
+      icon: LayoutDashboard
+    },
+    {
+      title: "Nubra GTM Strategy",
+      description: "Developed a comprehensive Go-To-Market strategy focusing on market positioning, channel optimization, and customer acquisition frameworks for scalable growth.",
+      tags: ["GTM Strategy", "Market Research", "Product Positioning"],
+      metrics: ["Market Segmentation", "Channel Optimization", "Growth Framework"],
+      icon: TrendingUp
+    },
+    {
       title: "Bank Lending Risk Analytics Platform",
       description: "A comprehensive risk analysis platform processing 10K+ loan records to identify high-risk borrowers. Engineered risk factors that helped reduce potential defaults by 10–12%.",
       tags: ["Python", "MySQL", "Excel", "Power BI", "Pandas"],
@@ -83,13 +106,6 @@ export const DATA = {
       tags: ["Python", "PyTorch", "SpaCy", "React", "GPU"],
       metrics: ["80% Intent Accuracy", "40% faster training with GPU", "120+ treatment responses"],
       icon: Brain
-    },
-    {
-      title: "Lead Research & GTM Automation",
-      description: "Automated research pipeline using Clay and OpenAI to qualify 100+ target companies. Integrated with Zapier for lead classification and Notion for tracking.",
-      tags: ["Clay", "Zapier AI", "OpenAI", "Notion"],
-      metrics: ["Qualifies 100+ companies", "50% less manual research", "Automated ICP signals"],
-      icon: Database
     }
   ],
   skills: [
