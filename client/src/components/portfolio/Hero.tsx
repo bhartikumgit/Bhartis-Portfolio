@@ -50,7 +50,7 @@ export function Hero() {
         >
           <div className="relative w-64 h-64 md:w-96 md:h-96">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-50 translate-x-4 translate-y-4"></div>
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white shadow-2xl transition-transform duration-500">
               <img 
                 src={DATA.profile.avatar} 
                 alt={DATA.profile.name} 
