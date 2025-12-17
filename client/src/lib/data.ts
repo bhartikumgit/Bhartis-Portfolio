@@ -1,5 +1,13 @@
-import { LucideIcon, Brain, TrendingUp, Search, Database, LayoutDashboard, Code2, LineChart, FileText } from "lucide-react";
-import avatarImage from "@assets/generated_images/3d_illustration_of_a_female_data_engineer_avatar.png";
+import {
+  LucideIcon,
+  Brain,
+  TrendingUp,
+  Search,
+  Database,
+  LayoutDashboard,
+  Code2,
+  LineChart,
+} from "lucide-react";
 
 export interface Project {
   title: string;
@@ -29,15 +37,17 @@ export const DATA = {
   profile: {
     name: "Bharti Kumari",
     role: "The Insight Architect",
-    tagline: "I like to call myself this because I interlink Tech and Business—engineering intelligent workflows that bridge data, backend logic, and strategy.",
-    summary: "Hi, I am Bharti, and I like to call myself 'The Insight Architect'. Why? Because I don't just analyze data—I build the systems that give it meaning. I blend Data Science, AI Automation, and Backend Development to create scalable solutions. Beyond the code, I thrive on collaboration—working across teams to translate technical complexity into clear business value. My current obsession? Pushing the boundaries of what's possible with AI Automation.",
+    tagline:
+      "I like to call myself this because I interlink Tech and Business—engineering intelligent workflows that bridge data, backend logic, and strategy.",
+    summary:
+      "Hi, I am Bharti, and I like to call myself 'The Insight Architect'. Why? Because I don't just analyze data—I build the systems that give it meaning. I blend Data Science, AI Automation, and Backend Development to create scalable solutions. Beyond the code, I thrive on collaboration—working across teams to translate technical complexity into clear business value. My current obsession? Pushing the boundaries of what's possible with AI Automation.",
     location: "Bhopal, India",
     email: "bhartikum08@gmail.com",
     linkedin: "https://linkedin.com/in/bharti-kumari-771b46251",
     github: "https://github.com/bhartikumgit",
     phone: "+91 7357244181",
-    avatar: avatarImage
   },
+
   experience: [
     {
       role: "Business Data Analyst Intern",
@@ -47,9 +57,16 @@ export const DATA = {
         "Analyzed 10K+ sales and customer records to uncover revenue drivers and market demand patterns that informed GTM planning.",
         "Built KPI dashboards across sales, segmentation, and inventory, reducing reporting effort by 20%.",
         "Ran cohort & retention analysis on 5K+ customers, driving a ~7% uplift in repeat purchases.",
-        "Collaborated with product and growth teams to deliver execution-ready insights."
+        "Collaborated with product and growth teams to deliver execution-ready insights.",
       ],
-      skills: ["Power BI", "Power Query", "Market Research", "GTM Strategy", "SQL", "Python"]
+      skills: [
+        "Power BI",
+        "Power Query",
+        "Market Research",
+        "GTM Strategy",
+        "SQL",
+        "Python",
+      ],
     },
     {
       role: "Content Editor",
@@ -58,82 +75,149 @@ export const DATA = {
       description: [
         "Wrote and optimized website content that boosted organic traffic by 35%.",
         "Worked with development and social media teams to increase on-page engagement by 25%.",
-        "Streamlined content workflows in Notion, reducing turnaround time by 30%."
+        "Streamlined content workflows in Notion, reducing turnaround time by 30%.",
       ],
-      skills: ["SEO", "Notion", "User Insights", "Content Strategy"]
-    }
+      skills: ["SEO", "Notion", "User Insights", "Content Strategy"],
+    },
   ],
+
   projects: [
     {
       title: "Lead Research & GTM Automation",
-      description: "Automated research pipeline using Clay and OpenAI to qualify 100+ target companies. Integrated with Zapier for lead classification and Notion for tracking.",
+      description:
+        "Automated research pipeline using Clay and OpenAI to qualify 100+ target companies. Integrated with Zapier for lead classification and Notion for tracking.",
       tags: ["Clay", "Zapier AI", "OpenAI", "Notion"],
-      metrics: ["Qualifies 100+ companies", "50% less manual research", "Automated ICP signals"],
+      metrics: [
+        "Qualifies 100+ companies",
+        "50% less manual research",
+        "Automated ICP signals",
+      ],
       icon: Database,
-      highlight: true
+      highlight: true,
     },
     {
       title: "Xeno Homepage Redesign",
-      description: "Redesigned the homepage to prioritize decisions over decoration. Focused on reducing 'Time-to-Insight' with features like Revenue Triage Mode and AI Quick Actions to force user action.",
+      description:
+        "Redesigned the homepage to prioritize decisions over decoration. Focused on reducing 'Time-to-Insight' with features like Revenue Triage Mode and AI Quick Actions to force user action.",
       tags: ["Product Design", "UX Strategy", "GTM Alignment", "Figma"],
-      metrics: ["Revenue Triage Mode", "AI Quick Actions", "Decision-First UI"],
-      icon: LayoutDashboard
+      metrics: [
+        "Revenue Triage Mode",
+        "AI Quick Actions",
+        "Decision-First UI",
+      ],
+      icon: LayoutDashboard,
     },
     {
       title: "Nubra GTM Strategy",
-      description: "Developed a comprehensive Go-To-Market strategy focusing on market positioning, channel optimization, and customer acquisition frameworks for scalable growth.",
+      description:
+        "Developed a comprehensive Go-To-Market strategy focusing on market positioning, channel optimization, and customer acquisition frameworks for scalable growth.",
       tags: ["GTM Strategy", "Market Research", "Product Positioning"],
-      metrics: ["Market Segmentation", "Channel Optimization", "Growth Framework"],
-      icon: TrendingUp
+      metrics: [
+        "Market Segmentation",
+        "Channel Optimization",
+        "Growth Framework",
+      ],
+      icon: TrendingUp,
     },
     {
       title: "Bank Lending Risk Analytics Platform",
-      description: "A comprehensive risk analysis platform processing 10K+ loan records to identify high-risk borrowers. Engineered risk factors that helped reduce potential defaults by 10–12%.",
+      description:
+        "A comprehensive risk analysis platform processing 10K+ loan records to identify high-risk borrowers. Engineered risk factors that helped reduce potential defaults by 10–12%.",
       tags: ["Python", "MySQL", "Excel", "Power BI", "Pandas"],
-      metrics: ["Processed 10K+ records", "Reduced potential defaults by ~12%", "30-40% faster risk scoring"],
-      icon: TrendingUp
+      metrics: [
+        "Processed 10K+ records",
+        "Reduced potential defaults by ~12%",
+        "30–40% faster risk scoring",
+      ],
+      icon: TrendingUp,
     },
     {
       title: "Customer Churn Prediction & Analysis",
-      description: "End-to-end churn prediction pipeline. Processed 7,500+ customer records, engineered 20+ predictive features, and trained a Random Forest model with 85% accuracy.",
-      tags: ["Python", "Scikit-learn", "SQL Server", "Power BI", "Flask"],
-      metrics: ["85% Model Accuracy", "Identified 1,450+ at-risk customers", "20% retention campaign improvement"],
-      icon: Search
+      description:
+        "End-to-end churn prediction pipeline. Processed 7,500+ customer records, engineered 20+ predictive features, and trained a Random Forest model with 85% accuracy.",
+      tags: [
+        "Python",
+        "Scikit-learn",
+        "SQL Server",
+        "Power BI",
+        "Flask",
+      ],
+      metrics: [
+        "85% Model Accuracy",
+        "Identified 1,450+ at-risk customers",
+        "20% retention campaign improvement",
+      ],
+      icon: Search,
     },
     {
       title: "Healthcare Chatbot (Chikitsak)",
-      description: "NLP-driven chatbot with a knowledge base of 35+ conditions. Uses PyTorch and SpaCy for intent classification, accelerated with GPU optimization.",
+      description:
+        "NLP-driven chatbot with a knowledge base of 35+ conditions. Uses PyTorch and SpaCy for intent classification, accelerated with GPU optimization.",
       tags: ["Python", "PyTorch", "SpaCy", "React", "GPU"],
-      metrics: ["80% Intent Accuracy", "40% faster training with GPU", "120+ treatment responses"],
-      icon: Brain
-    }
+      metrics: [
+        "80% Intent Accuracy",
+        "40% faster training with GPU",
+        "120+ treatment responses",
+      ],
+      icon: Brain,
+    },
   ],
+
   skills: [
     {
       category: "Data & ML",
-      skills: ["Python (Pandas, NumPy)", "Scikit-learn", "PyTorch", "NLP (SpaCy)", "SQL", "Feature Engineering"],
-      icon: Code2
+      skills: [
+        "Python (Pandas, NumPy)",
+        "Scikit-learn",
+        "PyTorch",
+        "NLP (SpaCy)",
+        "SQL",
+        "Feature Engineering",
+      ],
+      icon: Code2,
     },
     {
       category: "BI & Analytics",
-      skills: ["Power BI", "Power Query", "Excel", "DAX", "Tableau", "KPI Design"],
-      icon: LineChart
+      skills: [
+        "Power BI",
+        "Power Query",
+        "Excel",
+        "DAX",
+        "Tableau",
+        "KPI Design",
+      ],
+      icon: LineChart,
     },
     {
       category: "Soft Skills & Strategy",
-      skills: ["Cross-functional Collaboration", "Technical Communication", "Stakeholder Management", "Problem Solving", "Agile/Scrum"],
-      icon: TrendingUp
+      skills: [
+        "Cross-functional Collaboration",
+        "Technical Communication",
+        "Stakeholder Management",
+        "Problem Solving",
+        "Agile/Scrum",
+      ],
+      icon: TrendingUp,
     },
     {
       category: "Tools & Dev",
-      skills: ["Git", "Jupyter", "MySQL Workbench", "Jira", "Figma", "Notion", "React (Basic)"],
-      icon: LayoutDashboard
-    }
+      skills: [
+        "Git",
+        "Jupyter",
+        "MySQL Workbench",
+        "Jira",
+        "Figma",
+        "Notion",
+        "React (Basic)",
+      ],
+      icon: LayoutDashboard,
+    },
   ],
+
   education: {
     university: "VIT Bhopal University",
     degree: "BTech - Computer Science Engineering",
     period: "Expected May 2026",
-    cgpa: "8.5/10"
-  }
+    cgpa: "8.5/10",
+  },
 };

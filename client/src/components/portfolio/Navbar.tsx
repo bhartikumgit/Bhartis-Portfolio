@@ -1,91 +1,108 @@
-import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
-import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
+import { DATA } from "@/lib/data";
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent py-4",
-        scrolled || mobileMenuOpen ? "bg-background/80 backdrop-blur-md border-border py-2 shadow-sm" : "bg-transparent"
-      )}
-    >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-xl font-display font-bold tracking-tighter text-foreground">
-          BK<span className="text-primary">.</span>
-        </Link>
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur border-b border-border">
+      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+        {/* LOGO / BK ICON */}
+        <a href="#" className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+            BK
+          </div>
+          <span className="font-display font-semibold text-lg text-foreground hidden sm:inline">
+            {DATA.profile.name}
+          </span>
+        </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="/attached_assets/Bharti_Kumari_Resume_2026_1765811672971.pdf"
-            target="_blank"
-            className="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-md hover:bg-primary/90 transition-colors"
-          >
-            Resume
+        {/* DESKTOP NAV */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#projects" className="text-muted-foreground hover:text-foreground">
+            Projects
           </a>
-        </div>
+          <a href="#experience" className="text-muted-foreground hover:text-foreground">
+            Experience
+          </a>
+          <a href="#skills" className="text-muted-foreground hover:text-foreground">
+            Skills
+          </a>
+          <a href="#contact" className="text-muted-foreground hover:text-foreground">
+            Contact
+          </a>
 
-        {/* Mobile Nav Toggle */}
+          {/* SOCIALS — REPLACED RESUME */}
+          <a
+            href={DATA.profile.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
+
+          <a
+            href={DATA.profile.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground"
+            aria-label="GitHub"
+          >
+            <Github className="w-5 h-5" />
+          </a>
+        </nav>
+
+        {/* MOBILE MENU BUTTON */}
         <button
+          onClick={() => setOpen(!open)}
           className="md:hidden text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-6 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-5">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-lg font-medium text-foreground hover:text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
+      {/* MOBILE NAV */}
+      {open && (
+        <div className="md:hidden bg-background border-t border-border">
+          <nav className="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+            <a onClick={() => setOpen(false)} href="#projects">
+              Projects
             </a>
-          ))}
-          <a
-             href="/attached_assets/Bharti_Kumari_Resume_2026_1765811672971.pdf"
-             target="_blank"
-            className="px-4 py-2 text-center font-medium text-primary-foreground bg-primary rounded-md hover:bg-primary/90 transition-colors"
-          >
-            Download Resume
-          </a>
+            <a onClick={() => setOpen(false)} href="#experience">
+              Experience
+            </a>
+            <a onClick={() => setOpen(false)} href="#skills">
+              Skills
+            </a>
+            <a onClick={() => setOpen(false)} href="#contact">
+              Contact
+            </a>
+
+            <div className="flex gap-4 pt-2">
+              <a
+                href={DATA.profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href={DATA.profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
